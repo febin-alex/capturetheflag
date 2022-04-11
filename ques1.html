@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viesport" content="width=device-width,initial-scale=1">  
+        <title>Question 1</title>
+        <link rel="stylesheet" href="style.css"> 
+        <style>
+             body {
+color: white;
+            
+          background-image: url('https://ewscripps.brightspotcdn.com/dims4/default/074e940/2147483647/strip/true/crop/5760x3240+0+300/resize/1280x720!/quality/90/?url=http%3A%2F%2Fewscripps-brightspot.s3.amazonaws.com%2Fc6%2Ff7%2F2fe2062f4c85a0689a74f11f0ebc%2Fmarkus-spiske-iar-afb0qqw-unsplash.jpg');
+          }
+        </style>
+    </head>    
+    <body>
+        <script>
+            function myfun()
+            {
+                var a= document.getElementById("password").value;
+               
+                if(a==""){
+                    document.getElementById("messages").innerHTML="** Please Enter password";
+                    return false;
+                }
+                if(a=="@helloworld"){
+                    document.getElementById("messages").innerHTML="** LOGIN SUCCESS :***)";
+                    return true;
+                }
+                if(a !="@helloworld"){
+                    document.getElementById("messages").innerHTML="** Sorry wrong password";
+                    return false;
+                }
+
+            }
+        </script>
+        <center>
+<br>
+            <h1>Welcome to CTF Event</h1>
+		<br>
+            <h3>Enter Full Name Here</h3>
+            <div class="container">
+                <h1 class="label">User login</h1>
+                <form class="login_form" action="map.html" method="post" name="form" onsubmit="return myfun()">
+                    <div class="font">Full Name: </div>
+                    <input autocomplete="off" type="text" id="email" value="">
+        
+                    <br>
+                    <button type="submit">Login</button>
+
+                </form>
+            </div>     
+        </center>    
+        </body>
+</html>

@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    width: 100%;
+    height: 100vh;
+    color:#fff;
+    background: linear-gradient(-45deg,#845ec2,#d65db1,#ff6f91,#ff9671,#ffc75f,#f9f871);
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 10s ease-in-out infinite;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+    padding-top: 20px ;
+    color: #080716;
+}
+h2{
+    text-align: center;
+    font-size: 25px;
+    padding-top: 0px ;
+    color: #080616;
+}
+h3{
+    text-align: right;
+    padding-top: 0px;
+    padding-right: 20px;
+    color: #080524;
+}
+h4{
+    text-align: center;
+    font-size: 25px;
+    padding-top: 10px ;
+    color: #080522;
+}
+.container {
+    position: relative;
+    margin-top: 50px;
+    width: 450px;
+    height: auto;
+    background:linear-gradient(-45deg,#845ec2,#d65db1,#ff6f91,#ff9671,#ffc75f,#f9f871);
+    border-radius: 5px;
+   
+
+}
+.label {
+    padding: 20px 130px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #040213;
+
+}
+.login_form {
+    padding: 20px 40px;
+
+}
+.login_form.font{
+    font-size: 18px;
+    color: #130f40;
+    margin: 5px 0;
+}
+.login_form input {
+    height: 40px;
+    width: 350px;
+    padding: 0 5px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid silver;
+}
+.login_form .font2{
+    margin-top: 30px;
+}
+.login_form button {
+    margin: 45px 0 30px 0;
+    height: 45px;
+    width: 365px;
+    font-size: 20px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: #4f0958;
+    border-radius: 3px;
+    border: solid #840c8f93;
+    transition: 0.5s;
+}
+.login_form button:hover {
+    background: #9c0970b9;
+}
+@keyframes change {
+    0%{
+        background-position: 0 50%;     
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

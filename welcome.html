@@ -1,0 +1,105 @@
+<?php
+error_reporting (E_ALL ^ E_NOTICE);
+// Include config file
+require_once "config.php";
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+$id=$_SESSION['id'];
+  $sql = "SELECT SUM(`t1`+ `t2`+ `t3`+ `t4`+ `t5`+ `t6`+ `t7`+ `t8`+ `t9`+ `t10`+ `t11`+ `t12`+ `t13`+ `t14`+ `t15`) AS sum FROM `users` WHERE id = ?";
+
+        
+if($result = mysqli_query($link, $sql)){
+       mysqli_stmt_bind_param($result, "i", $param_id);
+            
+            // Set parameters
+            $param_id = $id;
+    if(mysqli_num_rows($result) > 0){
+        while($row = mysqli_fetch_array($result)){
+                echo  $row['sum'];
+        }
+        // Free result set
+        mysqli_free_result($result);
+    } else{
+        echo "No records matching your query were found.";
+    }
+} else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+}
+
+  
+    // Close connection
+    mysqli_close($link);
+
+?>
+ 
+<!DOCTYPE html>
+<html>
+<head>
+<title>CTF</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+<style>
+body {
+  background-color: black;
+  text-align: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('https://wallpaperset.com/w/full/8/c/6/519967.jpg');
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  background-size: cover;
+}
+h3 {
+    text-align: right;
+}
+h2{
+    text-align:left;
+}
+</style>
+</head>
+<body>
+
+<h1>Capture most flags!</h1>
+<h2>Captured Flags : <?php echo $tot; ?></h2>
+<div>
+<a href="hiddent.php">
+<img src="https://www.seekpng.com/png/full/9-96475_red-flag-red-flag-transparent-background.png" alt="indianpin" 
+style="width:50px; position : fixed ; right:32%; bottom:42%; width:35px; height:35px; border:none;"></a>
+</div>
+<div>
+<a href="https://www.google.com">
+<img src="https://www.seekpng.com/png/full/9-96475_red-flag-red-flag-transparent-background.png" alt="russianpin" 
+style="width:50px;position : fixed ; right:38%; bottom:65%; width:35px; height:35px; border:none;"></a>
+</div>
+<div>
+<a href="https://www.instagram.com">
+<img src="https://www.seekpng.com/png/full/9-96475_red-flag-red-flag-transparent-background.png" alt="africanpin" 
+style="width:50px;position : fixed ; right:50%; bottom:40%; width:35px; height:35px; border:none;"></a>
+</div>
+<div>
+<a href="https://www.duckduckgo.com">
+<img src="https://www.seekpng.com/png/full/9-96475_red-flag-red-flag-transparent-background.png" alt="americannpin" 
+style="width:50px;position : fixed ; right:80%; bottom:65%; width:35px; height:35px; border:none;"></a>
+</div>
+<div>
+<a href="https://images-na.ssl-images-amazon.com/images/I/71tr8KFgeGL._AC_SL1500_.jpg">
+<img src="https://www.seekpng.com/png/full/9-96475_red-flag-red-flag-transparent-background.png" alt="americanspin" 
+style="width:50px;position : fixed ; right:67%; bottom:20%; width:35px; height:35px; border:none;"></a>
+</div>
+<div>
+<a href="https://ripleyconnordotcom.files.wordpress.com/2012/12/alien-mona-lisa.jpg?w=584">
+<img src="https://www.seekpng.com/png/full/9-96475_red-flag-red-flag-transparent-background.png" alt="icelandpin" 
+style="width:50px;position : fixed ; right:63%; bottom:82%; width:35px; height:35px; border:none;"></a>
+</div>
+    <p>
+        <h3><a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
+        <br>
+        <a href="logout.php" class="btn btn-danger">Log Out</a></h3>
+    </p>
+</body>
+</html>

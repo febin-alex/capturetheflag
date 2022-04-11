@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+a:link,a:visited{
+    text-decoration: none;
+    color: rgb(15, 17, 14);
+    background-color: none;
+}
+a:hover,a:active{
+    text-decoration: underline;
+    color:white;
+    background-color: none;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    color:#fff;
+    background-image: url(https://st.depositphotos.com/1605581/3762/i/450/depositphotos_37623817-stock-photo-colorful-light-effect-background-illustration.jpg);
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-position: center center;
+    
+}
+.wrapper span{
+    position: fixed;
+    bottom: -50px;
+    border-radius: 50%;
+    animation: animate 10s linear infinite;
+    
+}
+.wrapper span:nth-child(1){
+    height: 15px;
+    width: 15px;
+    left: 0%;
+    animation-delay: 3s;
+    background-color:#10fdf1ce ;
+   
+}
+.wrapper span:nth-child(2){
+    height: 25px;
+    width: 25px;
+    left: 10%;
+    animation-delay: 3s;
+    background-color: #10fdf1cc ;
+}    
+.wrapper span:nth-child(3){
+    height: 30px;
+    width: 30px;
+    left: 20%;
+    animation-delay: 2s;
+    background-color: #10fdf1cb ;
+   
+}
+.wrapper span:nth-child(4){
+    height: 20px;
+    width: 20px;
+    left: 30%;
+    animation-delay: 5s;
+    background-color:#10fdf1c4 ;
+   
+}
+.wrapper span:nth-child(5){
+    height: 15px;
+    width: 15px;
+    left: 40%;
+    animation-delay: 1s;
+    background-color: #10fdf1be ;
+    
+}
+.wrapper span:nth-child(6){
+    height: 25px;
+    width: 25px;
+    left: 50%;
+    animation-delay: 7s;
+    background-color:#10fdf1c5 ;
+}
+.wrapper span:nth-child(7){
+    height: 30px;
+    width: 30px;
+    left: 60%;
+    animation-delay: 6s;
+    background-color: #10fdf1c4 ;
+ 
+}
+.wrapper span:nth-child(8){
+    height: 20px;
+    width: 20px;
+    left: 70%;
+    animation-delay: 8s;
+    background-color: #10fdf1c0 ;
+     
+}
+.wrapper span:nth-child(9){
+    height: 15px;
+    width: 15px;
+    left: 80%;
+    animation-delay: 6s;
+    background-color: #10fdf1cc ;
+    
+}
+.wrapper span:nth-child(10){
+    height: 25px;
+    width: 25px;
+    left: 90%;
+    animation-delay: 4s;
+    background-color: #10fdf1ce ;
+    
+}   
+h1{
+    text-align: center;
+    font-size: 50px;
+    padding-top: 20px ;
+    color: #01040c;
+}
+h2{
+    text-align: center;
+    font-size: 25px;
+    padding-top: 0px ;
+    color:  #01040c;
+}
+h3{
+    text-align: right;
+    padding-top: 0px;
+    padding-right: 20px;
+
+}
+h4{
+    text-align: center;
+    font-size: 25px;
+    padding-top: 10px ;
+    color: #070d1b;
+}
+
+.container {
+    position: relative;
+    margin-top: 50px;
+    width: 450px;
+    height: auto;
+    background:linear-gradient(-45deg,#104b6388,#6fc6f886,#6ffff38f,#b6e7e394);
+    border-radius: 5px;
+   
+
+}
+.label {
+    padding: 20px 130px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #040213;
+
+}
+.login_form {
+    padding: 20px 40px;
+
+}
+.login_form.font{
+    font-size: 18px;
+    color: #130f40;
+    margin: 5px 0;
+}
+.login_form input {
+    height: 40px;
+    width: 350px;
+    padding: 0 5px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid silver;
+}
+.login_form .font2{
+    margin-top: 30px;
+}
+.login_form button {
+    margin: 45px 0 30px 0;
+    height: 45px;
+    width: 365px;
+    font-size: 20px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: #4f0958;
+    border-radius: 3px;
+    border: solid #840c8f93;
+    transition: 0.5s;
+}
+.login_form button:hover {
+    background: #9c0970b9;
+}
+@keyframes animate {
+    0%{
+           bottom: 0;
+           margin-left: 90px;
+           margin-right: 0;
+    }
+    20%{
+        bottom: 20%;
+        margin-left: 0;
+        margin-right: 90px;
+    }
+    40%{
+        bottom: 40%;
+        margin-left: 90px;
+        margin-right: 0;
+    }   
+    60%{
+        bottom: 60%;
+        margin-left: 0px;
+        margin-right: 90px;
+    }
+    80%{
+        bottom: 80%;
+        margin-left: 90px;
+        margin-right: 0;
+    }
+    100%{
+        bottom: 100%;
+        margin-left: 90px;
+        margin-right: 0;
+    }
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
